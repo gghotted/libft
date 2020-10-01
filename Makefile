@@ -1,17 +1,18 @@
-TARGET = libft.a
-SRCS = isalpha.c
+NAME = libft.a
+SRCS = ft_isalpha.c
 OBJS = ${SRCS:.c=.o}
+HEADER = libft.h
 CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 .c.o:
-	${CC} ${CFLAGS} -I includes -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -I ${HEADER} -c $< -o ${<:.c=.o}
 
-${TARGET}: ${OBJS}
-	ar rcs ${TARGET} ${OBJS}
+$(NAME): ${OBJS}
+	ar rcs ${NAME} ${OBJS}
 
-all: ${TARGET}
+all: ${NAME}
 
 clean:
 	${RM} ${OBJS}

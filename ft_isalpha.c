@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:32:49 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/01 06:48:12 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/01 09:08:48 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_isupper(int c)
 		return (0);
 }
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if (islower(c) || isupper(c))
+	if (ft_islower(c) || ft_isupper(c))
 		return (1);
 	else
 		return (0);
