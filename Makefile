@@ -1,5 +1,8 @@
 NAME = libft.a
-SRCS = ft_isalpha.c
+SRCS = ft_isalpha.c \
+	   ft_isalnum.c \
+	   ft_isdigit.c \
+	   ft_isprint.c
 OBJS = ${SRCS:.c=.o}
 HEADER = libft.h
 CC = gcc
