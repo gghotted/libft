@@ -7,7 +7,8 @@ SRCS = ft_isalpha.c \
 	   ft_bzero.c \
 	   ft_toupper.c \
 	   ft_tolower.c \
-	   ft_memset.c
+	   ft_memset.c \
+	   ft_memmove.c
 OBJS = ${SRCS:.c=.o}
 HEADER = libft.h
 CC = gcc
