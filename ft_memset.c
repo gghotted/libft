@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 02:05:58 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/02 23:44:52 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/03 00:01:13 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_memset(void *b_org, int c, size_t len)
 
 	b = (unsigned char*)b_org;
 	while (len-- > 0)
-		*b++ = c;
+		*b++ = (unsigned char)c;
 	return (b_org);
 }
