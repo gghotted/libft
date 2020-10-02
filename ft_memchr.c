@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 01:37:23 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/02 23:46:19 by gypark           ###   ########.fr       */
+/*   Created: 2020/10/02 23:37:29 by gypark            #+#    #+#             */
+/*   Updated: 2020/10/02 23:57:56 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s_org, size_t n)
+void	*ft_memchr(const void *s_org, int c, size_t n)
 {
-	unsigned char *s;
+	unsigned char	*s;
 
 	s = (unsigned char*)s_org;
-	while (n-- > 0)
-		*s++ = 0;
+	while (n--)
+	{
+		if (*s == (unsigned char)c)
+			return (s);
+		s++;
+	}
+	return (NULL);
 }

@@ -6,18 +6,18 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 02:05:58 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/02 02:11:20 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/02 23:44:52 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b_org, int c, size_t len)
 {
-	void	*b_org;
+	unsigned char	*b;
 
-	b_org = b;
+	b = (unsigned char*)b_org;
 	while (len-- > 0)
-		*((unsigned char *)b++) = c;
+		*b++ = c;
 	return (b_org);
 }
