@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 05:59:11 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/04 07:51:40 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int		ft_isin(char *str, int c);
 int		ft_isspace(int c);
 char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nelem, size_t elsize);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
