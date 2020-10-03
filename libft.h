@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/03 02:08:11 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/04 05:30:55 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len);
 int		ft_startwith(const char *str, const char *substr);
 char	*ft_strcat(char *dest, const char *src);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_isin(char *str, int c);
+int		ft_isspace(int c);
 
 #endif
