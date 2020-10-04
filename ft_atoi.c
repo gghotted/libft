@@ -6,13 +6,13 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 04:27:51 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 05:32:40 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/04 09:13:53 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isin(char *str, int c)
+int	ft_isin(const char *str, int c)
 {
 	while (*str)
 		if (*str++ == c)
