@@ -6,13 +6,25 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 07:53:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 11:32:10 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:56:59 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static char	*ft_strcat(char *dest, const char *src)
+{
+	char	*dest_org;
+
+	dest_org = dest;
+	dest += ft_strlen(dest);
+	while (*src)
+		*dest++ = *src++;
+	*dest = 0;
+	return (dest_org);
+}
+
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 

@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 17:18:25 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:54:20 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ void			*ft_memccpy(void *dest_org, const void *src_org \
 int				ft_memcmp(const void *s1_org, const void *s2_org, size_t n);
 void			*ft_memchr(const void *s_org, int c, size_t n);
 size_t			ft_strlen(const char *s);
-char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *str, const char *substr, size_t len);
-char			*ft_strcat(char *dest, const char *src);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s);
