@@ -45,23 +45,22 @@ SRCS = ft_isalpha.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c
 OBJS = ${SRCS:.c=.o}
-HEADER = libft.h
 CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -I ${HEADER} -c $< -o ${<:.c=.o}
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
-$(NAME): ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
