@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 05:53:05 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 06:00:10 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 11:08:21 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	void	*memory;
 
 	memory = malloc(nelem * elsize);
-	ft_memset(memory, 0, nelem);
+	if (!memory)
+		return (0);
+	ft_memset(memory, 0, nelem * elsize);
 	return (memory);
 }

@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 04:27:51 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 09:13:53 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 10:59:59 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,19 @@ int	ft_isspace(int c)
 	return (ft_isin("\t\n\v\f\r ", c));
 }
 
+int	check_over_range(unsigned long long sum, int sign)
+{
+	if (sum > LLONG_MAX - 1 && sign == -1)
+		return (0);
+	if (sum > LLONG_MAX && sign == 1)
+		return (-1);
+	return (sum * sign);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	nbr;
-	int	sign;
+	long long	nbr;
+	int			sign;
 
 	nbr = 0;
 	sign = 1;
@@ -45,5 +54,5 @@ int	ft_atoi(const char *str)
 		nbr = (nbr * 10) + (*str - '0');
 		str++;
 	}
-	return (sign * nbr);
+	return (check_over_range(nbr, sign));
 }

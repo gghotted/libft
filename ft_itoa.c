@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 03:50:02 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/05 04:35:18 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 11:43:03 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_reverse(const char *s)
 	int		len;
 
 	len = ft_strlen(s);
-	new = malloc(len);
+	new = malloc(len + 1);
 	if (!new)
 		return (NULL);
 	new[len] = 0;

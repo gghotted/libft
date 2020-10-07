@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 00:52:04 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/03 01:36:21 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 10:21:57 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int		ft_startwith(const char *str, const char *substr)
 
 char	*ft_strnstr(const char *str, const char *substr, size_t len)
 {
+	if (!*substr)
+		return ((char*)str);
 	while (*str && len)
 	{
 		if (ft_startwith(str, substr) && ft_strlen(substr) <= len)
