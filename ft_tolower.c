@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 02:00:03 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/02 02:00:59 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:17:11 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (ft_isupper(c))
+	if ('A' <= c && c <= 'Z')
 		return (c + ('a' - 'A'));
 	return (c);
 }
