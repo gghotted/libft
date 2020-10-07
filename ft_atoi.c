@@ -6,13 +6,13 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 04:27:51 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 10:59:59 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 16:59:54 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isin(const char *str, int c)
+static int	ft_isin(const char *str, int c)
 {
 	while (*str)
 		if (*str++ == c)
@@ -20,12 +20,12 @@ int	ft_isin(const char *str, int c)
 	return (0);
 }
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	return (ft_isin("\t\n\v\f\r ", c));
 }
 
-int	check_over_range(unsigned long long sum, int sign)
+static int	check_over_range(unsigned long long sum, int sign)
 {
 	if (sum > LLONG_MAX - 1 && sign == -1)
 		return (0);
@@ -34,7 +34,7 @@ int	check_over_range(unsigned long long sum, int sign)
 	return (sum * sign);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	long long	nbr;
 	int			sign;

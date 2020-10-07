@@ -6,13 +6,13 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 00:52:04 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 10:21:57 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 16:58:56 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_startwith(const char *str, const char *substr)
+static int	ft_startwith(const char *str, const char *substr)
 {
 	while (*substr)
 		if (*substr++ != *str++)
@@ -20,7 +20,7 @@ int		ft_startwith(const char *str, const char *substr)
 	return (1);
 }
 
-char	*ft_strnstr(const char *str, const char *substr, size_t len)
+char		*ft_strnstr(const char *str, const char *substr, size_t len)
 {
 	if (!*substr)
 		return ((char*)str);

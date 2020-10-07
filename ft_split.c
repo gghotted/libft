@@ -6,13 +6,13 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 10:40:12 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 12:33:48 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:05:34 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count(char const *s, char c)
+static int	ft_count(char const *s, char c)
 {
 	int	cnt;
 
@@ -23,7 +23,7 @@ int		ft_count(char const *s, char c)
 	return (cnt);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**words;
 	char	**words_org;

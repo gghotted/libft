@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 10:58:07 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:05:16 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,9 @@ char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *str, const char *substr, size_t len);
-int				ft_startwith(const char *str, const char *substr);
 char			*ft_strcat(char *dest, const char *src);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *str);
-int				ft_isin(const char *str, int c);
-int				ft_isspace(int c);
 char			*ft_strdup(const char *s);
 void			*ft_calloc(size_t nelem, size_t elsize);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
@@ -58,8 +55,6 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_itoa(int n);
-unsigned		ft_abs(int n);
-char			*ft_reverse(const char *s);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);

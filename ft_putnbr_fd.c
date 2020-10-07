@@ -6,13 +6,18 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 06:14:12 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/05 06:41:14 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:03:55 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static unsigned	ft_abs(int n)
+{
+	return (n > 0 ? n : -n);
+}
+
+void			ft_putnbr_fd(int n, int fd)
 {
 	char		nbr[20];
 	unsigned	un;

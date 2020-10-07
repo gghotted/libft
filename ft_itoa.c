@@ -6,13 +6,13 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 03:50:02 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 11:43:03 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:03:10 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_reverse(const char *s)
+static char		*ft_reverse(const char *s)
 {
 	char	*new;
 	int		len;
@@ -27,12 +27,12 @@ char		*ft_reverse(const char *s)
 	return (new);
 }
 
-unsigned	ft_abs(int n)
+static unsigned	ft_abs(int n)
 {
 	return (n > 0 ? n : -n);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	unsigned	un;
 	char		nbr[20];

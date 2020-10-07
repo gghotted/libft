@@ -6,13 +6,21 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 08:04:57 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/04 09:12:46 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/07 17:00:54 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	ft_isin(const char *str, int c)
+{
+	while (*str)
+		if (*str++ == c)
+			return (1);
+	return (0);
+}
+
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*start;
 	char	*end;
