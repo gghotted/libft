@@ -6,34 +6,79 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 10:40:12 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 17:05:34 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/10 16:54:01 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count(char const *s, char c)
+static size_t	ft_word_count(char const *s, char c)
 {
-	int	cnt;
+	int		cnt;
+	char	*prev;
+	char	*curr;
 
+	if (!s || !*s)
+		return (0);
 	cnt = 0;
+	prev = (char*)s - 1;
 	while (*s)
-		if (*s++ == c)
-			cnt++;
+	{
+		if (*s == c)
+		{
+			curr = (char*)s;
+			if (curr - prev - 1 > 0)
+				cnt++;
+			prev = curr;
+		}
+		s++;
+	}
+	if (s - curr - 1 > 0)
+		cnt++;
 	return (cnt);
 }
 
-char		**ft_split(char const *s, char c)
+static void		ft_free_words(char **words)
+{
+	while (!*words)
+	{
+		free(*words);
+		words++;
+	}
+	free(words);
+}
+
+static char		**ft_find_nullptr(char **start, char **end)
+{
+	while (start <= end)
+	{
+		if (*start == 0)
+			return (start);
+		start++;
+	}
+	return (0);
+}
+
+char			**ft_check_ret(char **words_org, char **words)
+{
+	if (ft_find_nullptr(words_org, words - 1))
+	{
+		ft_free_words(words_org);
+		return (0);
+	}
+	return (words_org);
+}
+
+char			**ft_split(char const *s, char c)
 {
 	char	**words;
 	char	**words_org;
 	char	*sep;
 
-	words = malloc(sizeof(char*) * (ft_count(s, c) + 2));
+	if (!(words = malloc(sizeof(char*) * (ft_word_count(s, c) + 1))))
+		return (0);
 	words_org = words;
 	sep = (char*)s;
-	if (!words)
-		return (NULL);
 	while (sep)
 	{
 		sep = ft_strchr(s, c);
@@ -47,5 +92,5 @@ char		**ft_split(char const *s, char c)
 			*words++ = ft_strdup(s);
 	}
 	*words = 0;
-	return (words_org);
+	return (ft_check_ret(words_org, words));
 }
