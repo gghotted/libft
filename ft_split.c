@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 10:40:12 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/10 16:54:01 by gypark           ###   ########.fr       */
+/*   Updated: 2020/10/14 13:06:05 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ char			**ft_split(char const *s, char c)
 		return (0);
 	words_org = words;
 	sep = (char*)s;
-	while (sep)
+	while (sep && *sep)
 	{
 		sep = ft_strchr(s, c);
-		if (sep)
+		if (sep && *sep)
 		{
 			if (s != sep)
 				*words++ = ft_substr(s, 0, sep - s);
