@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 07:46:44 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 11:27:19 by gypark           ###   ########.fr       */
+/*   Updated: 2020/11/10 15:07:23 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	substr_org = substr;
 	s += start;
-	while (len--)
+	while (len-- && *s)
 		*substr++ = *s++;
 	*substr = 0;
 	return (substr_org);
