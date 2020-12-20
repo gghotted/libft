@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 17:54:20 by gypark           ###   ########.fr       */
+/*   Updated: 2020/12/21 02:28:14 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,25 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst \
 							, void *(*f)(void *), void (*del)(void *));
+
+/*
+**	my custom util functions
+*/
+int				ft_get_sign(double n);
+int				ft_endswith(char *s, char *end);
+int				ft_startswith(char *s, char *start);
+int				ft_strcmp(const char *s1, const char *s2);
+void			**ft_lst_contents(t_list *lst);
+void			ft_lst_replace_contents(t_list *lst, void **conents);
+void			ft_lst_concat(t_list **dest, t_list *src);
+char			*ft_unique(char *s);
+int				ft_unique_is_include(char *big, char *small);
+int				ft_isunique(char *s);
+long long		ft_max(long long n1, long long n2);
+long long		ft_min(long long n1, long long n2);
+char			*ft_repeat(int c, size_t size);
+size_t			ft_strcnt(char *s, char c);
+size_t			ft_ptrs_len(char **ptrs);
+void			ft_nothing(void *dummy);
 
 #endif
