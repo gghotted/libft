@@ -20,7 +20,9 @@ EXTSRCS = ft_min_bonus.c\
 	ft_strcmp_bonus.c\
 	ft_lst_replace_contents_bonus.c\
 	ft_lst_contents_bonus.c\
-	ft_lst_concat_bonus.c
+	ft_lst_concat_bonus.c \
+	ft_malloc_bonus.c \
+	ft_strcpy_bonus.c
 BSRCS = ft_lstadd_front.c\
 	ft_lstnew.c\
 	ft_lstlast.c\
