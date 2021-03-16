@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2020/12/21 02:28:14 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/16 16:19:09 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ char			*ft_repeat(int c, size_t size);
 size_t			ft_strcnt(char *s, char c);
 size_t			ft_ptrs_len(char **ptrs);
 void			ft_nothing(void *dummy);
+void			*ft_malloc(size_t size);
 
 #endif
