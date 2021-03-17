@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 03:50:02 by gypark            #+#    #+#             */
-/*   Updated: 2020/10/07 17:03:10 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/17 23:10:45 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ static char		*ft_reverse(const char *s)
 	while (*s)
 		new[len-- - 1] = *s++;
 	return (new);
-}
-
-static unsigned	ft_abs(int n)
-{
-	return (n > 0 ? n : -n);
 }
 
 char			*ft_itoa(int n)
