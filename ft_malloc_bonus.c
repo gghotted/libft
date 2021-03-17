@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_malloc.c                                        :+:      :+:    :+:   */
+/*   ft_malloc_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 16:21:33 by gypark            #+#    #+#             */
-/*   Updated: 2021/03/16 16:21:44 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/17 23:50:19 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	exit_malloc_error(void)
+{
+	ft_putendl_fd("Out of memory", STDERR_FILENO);
+	exit(1);
+}
 
 void	*ft_malloc(size_t size)
 {
@@ -18,9 +24,6 @@ void	*ft_malloc(size_t size)
 
 	memory = malloc(size);
 	if (!memory)
-	{
-		ft_putendl_fd("Out of memory", STDERR_FILENO);
-		exit(1);
-	}
+		exit_malloc_error();
 	return (memory);
 }
