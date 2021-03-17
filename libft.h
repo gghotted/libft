@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2021/03/17 23:10:32 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/17 23:51:03 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,7 @@ void			*ft_malloc(size_t size);
 char			*ft_strcpy(char *dst, const char *src);
 int				ft_extend(char **org, char *new);
 unsigned		ft_abs(int n);
+void			exit_malloc_error(void);
+char			*fte_itoa(int n);
 
 #endif
