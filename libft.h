@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: gypark <gypark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2021/03/17 23:51:03 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/19 04:48:45 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ int				ft_extend(char **org, char *new);
 unsigned		ft_abs(int n);
 void			exit_malloc_error(void);
 char			*fte_itoa(int n);
+void			fte_putchar_repeat(char c, int cnt);
 
 #endif
