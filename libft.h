@@ -6,7 +6,7 @@
 /*   By: gypark <gypark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 03:34:55 by gypark            #+#    #+#             */
-/*   Updated: 2021/03/21 04:09:08 by gypark           ###   ########.fr       */
+/*   Updated: 2021/03/31 14:36:11 by gypark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ char			*fte_itoa(int n);
 void			fte_putchar_repeat(char c, int cnt);
 void			ft_safefree(void **ptr);
 char			*ft_nbr_rmzero(char *nbr);
+void			ft_swap(int *a, int *b);
 
 #endif

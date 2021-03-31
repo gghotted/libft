@@ -28,7 +28,8 @@ EXTSRCS = ft_min_bonus.c\
 	fte_itoa_bonus.c \
 	fte_putchar_repeat_bonus.c \
 	ft_safefree_bonus.c \
-	ft_nbr_rmzero_bonus.c
+	ft_nbr_rmzero_bonus.c \
+	ft_swap_bonus.c
 BSRCS = ft_lstadd_front.c\
 	ft_lstnew.c\
 	ft_lstlast.c\
